@@ -8,7 +8,7 @@ Gigih 3.0 Bootcamp is a coding bootcamp that aims to equip participants with ess
 
 During the bootcamp, I learned and practiced the following:
 
-## Modul 1: Fundamentals of Javascript
+#### Modul 1: Fundamentals of Javascript
 
 1.1: Module 1.1: Introduction to Fullstack Track
 1.2: Module 1.2: JS Intermediate
