@@ -21,9 +21,9 @@ yarn install
 ```
 
 ```bash
-npm run dev
+npm run serve
 # or
-yarn dev
+yarn serve
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
