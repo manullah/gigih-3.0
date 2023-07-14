@@ -44,11 +44,11 @@ During the bootcamp, I learned and practiced the following:
 
 - [ ] 5.2: Forms, Lifting State Up
 
-  5.3: React Router & UI Component
+- [ ] 5.3: React Router & UI Component
 
 ### Modul 6: Integrating Backend and Frontend, Deployment
 
-6.1: Connecting React with Express + MongoDB
+- [ ] 6.1: Connecting React with Express + MongoDB
 
 <!-- ## Repository Structure
 
