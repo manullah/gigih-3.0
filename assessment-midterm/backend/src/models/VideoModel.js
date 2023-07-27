@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const videoSchema = mongoose.Schema({
+const schema = mongoose.Schema({
   urlThumbnail: {
     type: String,
     required: true,
@@ -11,6 +11,12 @@ const videoSchema = mongoose.Schema({
       ref: "Product",
     },
   ],
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
 });
 
-module.exports = mongoose.model("Video", videoSchema);
+module.exports = mongoose.model("Video", schema);
