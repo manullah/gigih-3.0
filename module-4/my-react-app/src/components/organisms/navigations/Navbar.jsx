@@ -1,4 +1,11 @@
-export const NavBar = () => {
+import { Link } from "react-router-dom"
+import { useSpotifyLogin } from "../../../domains/spotify/hooks/useSpotifyHook"
+
+export const NavBar = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { displayName } = props
+  const { accessToken, doLogout } = useSpotifyLogin()
+
   return (
     <main className="col-span-5 row-span-3 overflow-auto">
       <header
@@ -24,6 +31,31 @@ export const NavBar = () => {
             </svg>
           </button>
         </div>
+
+        {accessToken
+          ? (
+            <div className="flex gap-4 items-center">
+              <p className="text-white">{displayName}</p>
+              <button
+                type="button"
+                className="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white py-2.5 px-4 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+                onClick={doLogout}
+              >
+                <span className="inline-block">Logout</span>
+              </button>
+            </div>
+          )
+          : (
+            <Link to='/login'>
+              <button
+                type="button"
+                className="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white py-2.5 px-4 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+              >
+                <span className="inline-block">Signin</span>
+              </button>
+            </Link>
+          )
+        }
       </header>
     </main>
   )
